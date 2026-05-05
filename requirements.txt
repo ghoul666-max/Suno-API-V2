@@ -4,3 +4,9 @@ fastapi
 uvicorn
 pydantic
 requests
+fastapi
+uvicorn
+pydantic
+httpx
+pydantic-settings
+python-dotenv
