@@ -101,3 +101,9 @@ async def fetch_credits(token: str = Depends(get_token)):
         raise HTTPException(
             detail=str(e), status_code=status.HTTP_500_INTERNAL_SERVER_ERROR
         )
+from cookie import suno_auth, start_keep_alive
+
+@app.on_event("startup")
+async def startup_event():
+    # 在应用启动时再开启保活线程
+    start_keep_alive(suno_auth)
