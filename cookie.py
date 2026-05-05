@@ -74,4 +74,4 @@ def start_keep_alive(suno_cookie: SunoCookie):
     t.start()
 
 
-start_keep_alive(suno_auth)
+
